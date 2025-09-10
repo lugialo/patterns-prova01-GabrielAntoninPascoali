@@ -17,3 +17,11 @@ db1.query("SELECT * FROM users");
 
 const db2 = new Database("db://meu-banco");
 db2.query("SELECT * FROM products");
+
+if (db1 === db2) {
+  console.log(
+      'Singleton funcionou, pois as variáveis estão usando a mesma instância.'
+  );
+} else {
+  console.log('Singleton falhou, pois as variáveis não estão usando a mesma instância.');
+}
