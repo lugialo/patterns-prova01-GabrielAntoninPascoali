@@ -1,4 +1,5 @@
 // Aplicação 03 - Abstract
+console.log("Aplicação 03 - Abstract Factory");
 
 class UIFactory {
     createButton() {

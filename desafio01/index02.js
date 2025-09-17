@@ -1,4 +1,5 @@
 // Aplicação 02 - Builder
+console.log("Aplicação 02 - Builder");
 class Lanche {
     constructor({nome = '', pao = false, carne = false, queijo = false, salada = false, molho = false } = {}) {
       this.nome = nome;

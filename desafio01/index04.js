@@ -1,4 +1,5 @@
 // Aplicação 04 - Factory
+console.log("Aplicação 04 - Factory");
 
 class Transport {
     move() {

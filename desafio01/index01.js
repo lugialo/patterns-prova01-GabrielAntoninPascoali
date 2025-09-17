@@ -1,4 +1,5 @@
 // Aplicação 01 - Singleton
+console.log("Aplicação 01 - Singleton");
 class Config {
     constructor() {
       if (Config.instance) {
