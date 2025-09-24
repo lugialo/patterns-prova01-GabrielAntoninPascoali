@@ -12,6 +12,17 @@ class SMSService {
   }
 }
 
+class SMSAdapter extends Notifier {
+  constructor(smsService) {
+    super();
+    this.smsService = smsService;
+  }
+
+  send(message) {
+    this.smsService.sendSMS(message);
+  }
+}
+
 // Cliente
 function notifyUser(notifier, message) {
   notifier.send(message);
@@ -21,6 +32,7 @@ function notifyUser(notifier, message) {
 const emailNotifier = new Notifier();
 notifyUser(emailNotifier, "Bem-vindo ao sistema!");
 
-// Tentando usar o SMSService diretamente (vai falhar)
+// Usando o SMSService com o adaptador
 const smsService = new SMSService();
-// notifyUser(smsService, "Seu código é 1234");
+const smsAdapter = new SMSAdapter(smsService);
+notifyUser(smsAdapter, "Seu código é 1234");
